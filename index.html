@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sacolão Shalom - As melhores frutas, verduras, saladas de frutas, além de pão francês, bisnaga, pão de milho e salgados assados e fritos. Venha nos visitar no Balneário São José.">
+    <title>Sacolão Shalom | Frutas, Verduras e Padaria</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo-link">
+                <!-- Por favor, salve a sua logo como logo.png dentro da pasta assets -->
+                <img src="assets/logo.jpg" alt="Sacolão Shalom" class="logo" onerror="this.src='https://placehold.co/150x50/2F8F46/FFFFFF?text=Sacolao+Shalom'">
+            </a>
+            
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#hortifruti">Hortifruti</a></li>
+                    <li><a href="#padaria">Padaria & Salgados</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                </ul>
+                <a href="https://wa.me/5511978101851?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20do%20Sacol%C3%A3o%20Shalom!" target="_blank" class="btn-whatsapp nav-btn">
+                    <i class="fab fa-whatsapp"></i> Peça pelo WhatsApp
+                </a>
+            </nav>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Bem-vindo ao Sacolão Shalom</h1>
+                <p>Fresco, Saudável e Pertinho de Você! Conheça nossas frutas, verduras e nossa padaria com pães quentinhos e salgados irresistíveis.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5511978101851?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> Fazer Pedido
+                    </a>
+                    <a href="#localizacao" class="btn btn-secondary" style="border: none;">
+                        <i class="fas fa-map-marker-alt"></i> Como Chegar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hortifruti Section -->
+    <section class="section hortifruti-section" id="hortifruti">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nosso Hortifruti</h2>
+                <p>Cores e sabores que trazem saúde para a sua mesa.</p>
+            </div>
+            
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/frutas.jpg" alt="Frutas">
+                            <div class="card-content">
+                                <h3>Frutas Frescas</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/frutas1.jpg" alt="Mais Frutas">
+                            <div class="card-content">
+                                <h3>Variedade de Frutas</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/hortaliças.jpg" alt="Hortaliças">
+                            <div class="card-content">
+                                <h3>Hortaliças</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/legumes.jpg" alt="Legumes">
+                            <div class="card-content">
+                                <h3>Legumes</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/mandioca.jpg" alt="Mandioca">
+                            <div class="card-content">
+                                <h3>Mandioca</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/alho.jpg" alt="Alho">
+                            <div class="card-content">
+                                <h3>Alho</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Padaria Section -->
+    <section class="section padaria-section" id="padaria">
+        <div class="container">
+            <div class="section-title">
+                <h2>Padaria e Salgados</h2>
+                <p>Porque não há nada como um pãozinho quente ou um salgado saboroso!</p>
+            </div>
+            
+            <div class="padaria-intro">
+                <p>No <strong>Sacolão Shalom</strong> você também encontra uma variedade deliciosa de pães: <strong>Pão Francês quentinho, Bisnagas macias e um maravilhoso Pão de Milho</strong>. Além disso, temos deliciosos <strong>salgados assados e fritos</strong> para qualquer hora do dia!</p>
+            </div>
+
+            <!-- Swiper Padaria -->
+            <div class="swiper padariaSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/espacopadaria.jpg" alt="Espaço Padaria">
+                            <div class="card-content">
+                                <h3>Nossa Padaria</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/pao.jpg" alt="Pães">
+                            <div class="card-content">
+                                <h3>Pães Fresquinhos</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/pao1.jpg" alt="Mais Pães">
+                            <div class="card-content">
+                                <h3>Variedade de Pães</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            
+            <div class="text-center mt-2">
+                <a href="https://wa.me/5511978101851?text=Ol%C3%A1%21%20gostaria%20de%20comprar%20com%20voc%C3%AAs%21" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Entre em contato conosco
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="section location-section" id="localizacao">
+        <div class="container">
+            <div class="section-title">
+                <h2>Venha nos Visitar</h2>
+                <p>Estamos esperando por você com as portas abertas.</p>
+            </div>
+            
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Endereço</h3>
+                            <p>Rua Anum Preto, 180<br>Balneário São José, São Paulo - SP<br>CEP: 04864-200</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>(11) 97810-1851</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Sacolão%20Shalom,%20-23.7698661,-46.7199511&hl=pt-BR&z=16&output=embed" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Sacolão Shalom</h2>
+                    <p>Qualidade, frescor e economia para a sua família.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Atendimento</h3>
+                    <p><a href="https://wa.me/5511978101851" target="_blank"><i class="fab fa-whatsapp"></i> (11) 97810-1851</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sacolão Shalom. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511978101851?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" class="float-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
