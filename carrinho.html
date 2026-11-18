@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finalizar Pedido - Sacolão Shalom. Revise os itens do seu carrinho e envie o pedido pelo WhatsApp.">
+    <title>Meu Carrinho & Finalizar Pedido | Sacolão Shalom</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.jpg" alt="Sacolão Shalom" class="logo" onerror="this.src='https://placehold.co/150x50/2F8F46/FFFFFF?text=Sacolao+Shalom'">
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo de Produtos</a></li>
+                    <li><a href="carrinho.html" class="active">Meu Carrinho</a></li>
+                    <li><a href="index.html#localizacao">Localização</a></li>
+                </ul>
+                <a href="catalogo.html" class="btn-whatsapp nav-btn">
+                    <i class="fas fa-plus"></i> Adicionar Mais Itens
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="carrinho.html" class="nav-cart-link" aria-label="Meu Carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="nav-cart-text">Carrinho</span>
+                    <span class="nav-cart-badge" id="navCartBadge" hidden>0</span>
+                </a>
+                <div class="hamburger" id="hamburger" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Meu Carrinho &amp; Finalização</h1>
+            <p>Revise os itens selecionados, preencha os dados para entrega e envie seu pedido pronto no WhatsApp.</p>
+        </div>
+    </section>
+
+    <!-- Cart & Checkout Section -->
+    <main>
+        <section class="section cart-view-section" id="carrinho">
+            <div class="container">
+                <div class="cart-view-topbar">
+                    <a href="catalogo.html" class="btn-back-catalog">
+                        <i class="fas fa-arrow-left"></i> Voltar ao Catálogo / Adicionar mais itens
+                    </a>
+                    <button type="button" class="btn-clear-cart" id="clearCartBtn" hidden>
+                        <i class="fas fa-trash-alt"></i> Limpar Carrinho
+                    </button>
+                </div>
+
+                <!-- Estado Carrinho Vazio -->
+                <div class="cart-empty-box" id="cartEmptyState">
+                    <div class="cart-empty-icon">
+                        <i class="fas fa-shopping-basket"></i>
+                    </div>
+                    <h2>Seu carrinho ainda está vazio</h2>
+                    <p>Adicione frutas, legumes, hortaliças, pães ou temperos no catálogo para montar seu pedido.</p>
+                    <a href="catalogo.html" class="btn btn-primary">
+                        <i class="fas fa-store"></i> Explorar Catálogo de Produtos
+                    </a>
+                </div>
+
+                <!-- Conteúdo Carrinho Preenchido -->
+                <div id="cartFilledContent" hidden>
+                    <div class="min-order-box" id="minOrderBox" aria-live="polite">
+                        <div class="min-order-header">
+                            <span class="min-order-message">
+                                <i class="fas fa-info-circle" id="minOrderIcon"></i>
+                                <span id="minOrderText">Pedido mínimo de R$ 60,00 em produtos.</span>
+                            </span>
+                            <a href="catalogo.html" class="min-order-add-link" id="minOrderAddLink">
+                                <i class="fas fa-plus-circle"></i> Adicionar mais itens
+                            </a>
+                        </div>
+                        <div class="min-order-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="minOrderProgressTrack">
+                            <div class="min-order-progress-fill" id="minOrderProgressBar" style="width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="cart-checkout-grid">
+                        <div class="cart-items-panel">
+                            <div class="panel-header">
+                                <h2><i class="fas fa-list-ul"></i> Itens Selecionados</h2>
+                                <span class="panel-count" id="cartPageCountLabel">0 itens</span>
+                            </div>
+                            <div class="cart-page-items" id="cartPageItems"></div>
+                            <div class="cart-totals-breakdown">
+                                <div class="cart-breakdown-row">
+                                    <span>Subtotal dos itens:</span>
+                                    <strong id="cartSubtotal">R$ 0,00</strong>
+                                </div>
+                                <div class="cart-breakdown-row">
+                                    <span>Taxa de entrega:</span>
+                                    <strong id="cartDeliveryFee">R$ 10,00</strong>
+                                </div>
+                                <div class="cart-breakdown-row cart-breakdown-total">
+                                    <span>Total com entrega:</span>
+                                    <div class="cart-total-right">
+                                        <strong id="cartPageTotal">R$ 0,00</strong>
+                                        <small id="cartPageConsultNote" hidden>(+ itens com preço a consultar)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-form-panel">
+                            <div class="panel-header">
+                                <h2><i class="fas fa-map-marker-alt"></i> Dados para Entrega</h2>
+                            </div>
+                            <form id="checkoutForm" class="checkout-form">
+                                <div class="form-group">
+                                    <label for="clientName">Nome completo *</label>
+                                    <input type="text" id="clientName" required placeholder="Seu nome completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientAddress">Bloco e Número do Apartamento / Casa *</label>
+                                    <input type="text" id="clientAddress" required placeholder="Ex: Bloco B, Apto 32 / Condomínio ou Rua e Nº">
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientPayment">Forma de pagamento *</label>
+                                    <select id="clientPayment" required>
+                                        <option value="">Selecione uma opção...</option>
+                                        <option value="Pix">Pix</option>
+                                        <option value="Cartão na entrega">Cartão na entrega</option>
+                                        <option value="Dinheiro na entrega">Dinheiro na entrega</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientNotes">Observações (opcional)</label>
+                                    <textarea id="clientNotes" rows="3" placeholder="Ex: Frutas mais verdes, sabor do bolo, troco para R$ 50..."></textarea>
+                                </div>
+                                <div class="checkout-min-warning" id="checkoutMinWarning" hidden>
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span id="checkoutMinWarningText">Adicione mais itens para atingir o pedido mínimo de R$ 60,00.</span>
+                                </div>
+                                <button type="submit" class="btn btn-whatsapp-submit" id="submitOrderBtn">
+                                    <i class="fab fa-whatsapp"></i> Confirmar e Enviar no WhatsApp
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Sacolão Shalom</h2>
+                    <p>Qualidade, frescor e economia para a sua família.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Atendimento</h3>
+                    <p><a href="https://wa.me/5511988525518" target="_blank"><i class="fab fa-whatsapp"></i> (11) 98852-5518</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sacolão Shalom. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511988525518?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" class="float-whatsapp" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

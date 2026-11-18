@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sacolão Shalom - As melhores frutas, verduras, saladas de frutas, além de pão francês, bisnaga, pão de milho e salgados assados e fritos. Venha nos visitar no Balneário São José.">
     <title>Sacolão Shalom | Frutas, Verduras e Padaria</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
-    
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -25,25 +25,32 @@
     <!-- Header & Navigation -->
     <header class="header">
         <div class="container nav-container">
-            <a href="#" class="logo-link">
-                <!-- Por favor, salve a sua logo como logo.png dentro da pasta assets -->
+            <a href="index.html" class="logo-link">
                 <img src="assets/logo.jpg" alt="Sacolão Shalom" class="logo" onerror="this.src='https://placehold.co/150x50/2F8F46/FFFFFF?text=Sacolao+Shalom'">
             </a>
-            
+
             <nav class="navbar" id="navbar">
                 <ul class="nav-links">
-                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo de Produtos</a></li>
                     <li><a href="#hortifruti">Hortifruti</a></li>
                     <li><a href="#padaria">Padaria & Salgados</a></li>
                     <li><a href="#localizacao">Localização</a></li>
                 </ul>
-                <a href="https://wa.me/5511978101851?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20do%20Sacol%C3%A3o%20Shalom!" target="_blank" class="btn-whatsapp nav-btn">
-                    <i class="fab fa-whatsapp"></i> Peça pelo WhatsApp
+                <a href="catalogo.html" class="btn-whatsapp nav-btn">
+                    <i class="fas fa-shopping-basket"></i> Fazer Pedido
                 </a>
             </nav>
-            
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
+
+            <div class="header-actions">
+                <a href="carrinho.html" class="nav-cart-link" aria-label="Meu Carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="nav-cart-text">Carrinho</span>
+                    <span class="nav-cart-badge" id="navCartBadge" hidden>0</span>
+                </a>
+                <div class="hamburger" id="hamburger" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
@@ -53,10 +60,10 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <h1>Bem-vindo ao Sacolão Shalom</h1>
-                <p>Fresco, Saudável e Pertinho de Você! Conheça nossas frutas, verduras e nossa padaria com pães quentinhos e salgados irresistíveis.</p>
+                <p>Fresco, Saudável e Pertinho de Você! Frutas selecionadas, verduras fresquinhas, temperos e uma padaria com pães quentinhos e salgados irresistíveis.</p>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/5511978101851?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-whatsapp"></i> Fazer Pedido
+                    <a href="catalogo.html" class="btn btn-primary">
+                        <i class="fas fa-shopping-basket"></i> Ver Catálogo / Fazer Pedido
                     </a>
                     <a href="#localizacao" class="btn btn-secondary" style="border: none;">
                         <i class="fas fa-map-marker-alt"></i> Como Chegar
@@ -73,14 +80,13 @@
                 <h2>Nosso Hortifruti</h2>
                 <p>Cores e sabores que trazem saúde para a sua mesa.</p>
             </div>
-            
+
             <!-- Swiper -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="assets/frutas.jpg" alt="Frutas">
+                            <img src="assets/frutas.jpg" alt="Frutas" loading="lazy">
                             <div class="card-content">
                                 <h3>Frutas Frescas</h3>
                             </div>
@@ -88,7 +94,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="assets/frutas1.jpg" alt="Mais Frutas">
+                            <img src="assets/frutas1.jpg" alt="Mais Frutas" loading="lazy">
                             <div class="card-content">
                                 <h3>Variedade de Frutas</h3>
                             </div>
@@ -96,7 +102,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="assets/hortaliças.jpg" alt="Hortaliças">
+                            <img src="assets/hortaliças.jpg" alt="Hortaliças" loading="lazy">
                             <div class="card-content">
                                 <h3>Hortaliças</h3>
                             </div>
@@ -104,7 +110,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="assets/legumes.jpg" alt="Legumes">
+                            <img src="assets/legumes.jpg" alt="Legumes" loading="lazy">
                             <div class="card-content">
                                 <h3>Legumes</h3>
                             </div>
@@ -112,7 +118,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="assets/mandioca.jpg" alt="Mandioca">
+                            <img src="assets/mandioca.jpg" alt="Mandioca" loading="lazy">
                             <div class="card-content">
                                 <h3>Mandioca</h3>
                             </div>
@@ -120,7 +126,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="assets/alho.jpg" alt="Alho">
+                            <img src="assets/alho.jpg" alt="Alho" loading="lazy">
                             <div class="card-content">
                                 <h3>Alho</h3>
                             </div>
@@ -130,6 +136,12 @@
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="text-center mt-2">
+                <a href="catalogo.html" class="btn btn-primary">
+                    <i class="fas fa-tags"></i> Ver Preços no Catálogo
+                </a>
             </div>
         </div>
     </section>
@@ -141,7 +153,7 @@
                 <h2>Padaria e Salgados</h2>
                 <p>Porque não há nada como um pãozinho quente ou um salgado saboroso!</p>
             </div>
-            
+
             <div class="padaria-intro">
                 <p>No <strong>Sacolão Shalom</strong> você também encontra uma variedade deliciosa de pães: <strong>Pão Francês quentinho, Bisnagas macias e um maravilhoso Pão de Milho</strong>. Além disso, temos deliciosos <strong>salgados assados e fritos</strong> para qualquer hora do dia!</p>
             </div>
@@ -151,7 +163,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="assets/espacopadaria.jpg" alt="Espaço Padaria">
+                            <img src="assets/espacopadaria.jpg" alt="Espaço Padaria" loading="lazy">
                             <div class="card-content">
                                 <h3>Nossa Padaria</h3>
                             </div>
@@ -159,7 +171,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="assets/pao.jpg" alt="Pães">
+                            <img src="assets/pao.jpg" alt="Pães" loading="lazy">
                             <div class="card-content">
                                 <h3>Pães Fresquinhos</h3>
                             </div>
@@ -167,7 +179,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="assets/pao1.jpg" alt="Mais Pães">
+                            <img src="assets/pao1.jpg" alt="Mais Pães" loading="lazy">
                             <div class="card-content">
                                 <h3>Variedade de Pães</h3>
                             </div>
@@ -178,9 +190,12 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-            
-            <div class="text-center mt-2">
-                <a href="https://wa.me/5511978101851?text=Ol%C3%A1%21%20gostaria%20de%20comprar%20com%20voc%C3%AAs%21" target="_blank" class="btn btn-primary">
+
+            <div class="text-center mt-2 cta-group">
+                <a href="catalogo.html" class="btn btn-primary">
+                    <i class="fas fa-bread-slice"></i> Pedir Pães no Catálogo
+                </a>
+                <a href="https://wa.me/5511988525518?text=Ol%C3%A1%21%20gostaria%20de%20comprar%20com%20voc%C3%AAs%21" target="_blank" class="btn btn-secondary">
                     <i class="fab fa-whatsapp"></i> Entre em contato conosco
                 </a>
             </div>
@@ -194,7 +209,7 @@
                 <h2>Venha nos Visitar</h2>
                 <p>Estamos esperando por você com as portas abertas.</p>
             </div>
-            
+
             <div class="location-content">
                 <div class="location-info">
                     <div class="info-item">
@@ -213,13 +228,13 @@
                     </div>
                 </div>
                 <div class="map-container">
-                    <iframe 
-                        src="https://maps.google.com/maps?q=Sacolão%20Shalom,%20-23.7698661,-46.7199511&hl=pt-BR&z=16&output=embed" 
-                        width="100%" 
-                        height="400" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
+                    <iframe
+                        src="https://maps.google.com/maps?q=Sacolão%20Shalom,%20-23.7698661,-46.7199511&hl=pt-BR&z=16&output=embed"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -237,7 +252,7 @@
                 </div>
                 <div class="footer-links">
                     <h3>Atendimento</h3>
-                    <p><a href="https://wa.me/5511978101851" target="_blank"><i class="fab fa-whatsapp"></i> (11) 97810-1851</a></p>
+                    <p><a href="https://wa.me/5511988525518" target="_blank"><i class="fab fa-whatsapp"></i> (11) 98852-5518</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -246,8 +261,31 @@
         </div>
     </footer>
 
+    <!-- Floating Cart Bar -->
+    <div class="cart-floating-bar" id="cartBar" aria-live="polite" hidden>
+        <div class="container cart-bar-content">
+            <div class="cart-summary-info">
+                <div class="cart-icon-wrapper">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </div>
+                <div class="cart-totals">
+                    <span class="cart-total-label">Subtotal dos itens:</span>
+                    <div class="cart-total-values">
+                        <strong class="cart-total-value" id="cartTotal">R$ 0,00</strong>
+                        <small class="cart-consult-note" id="cartConsultNote" hidden>+ itens a consultar</small>
+                    </div>
+                    <small class="cart-min-note" id="cartMinOrderNote"></small>
+                </div>
+            </div>
+            <a href="carrinho.html" class="btn btn-cart-action">
+                <i class="fas fa-shopping-cart"></i> Ver Carrinho / Finalizar
+            </a>
+        </div>
+    </div>
+
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5511978101851?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" class="float-whatsapp">
+    <a href="https://wa.me/5511988525518?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" class="float-whatsapp" aria-label="Falar no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 

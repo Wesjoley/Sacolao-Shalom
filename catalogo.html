@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de Produtos do Sacolão Shalom - Frutas, legumes, hortaliças, padaria e temperos com envio direto pelo WhatsApp.">
+    <title>Catálogo de Produtos | Sacolão Shalom</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.jpg" alt="Sacolão Shalom" class="logo" onerror="this.src='https://placehold.co/150x50/2F8F46/FFFFFF?text=Sacolao+Shalom'">
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html" class="active">Catálogo de Produtos</a></li>
+                    <li><a href="carrinho.html">Meu Carrinho</a></li>
+                    <li><a href="index.html#localizacao">Localização</a></li>
+                </ul>
+                <a href="carrinho.html" class="btn-whatsapp nav-btn">
+                    <i class="fas fa-shopping-cart"></i> Finalizar Pedido
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="carrinho.html" class="nav-cart-link" aria-label="Meu Carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="nav-cart-text">Carrinho</span>
+                    <span class="nav-cart-badge" id="navCartBadge" hidden>0</span>
+                </a>
+                <div class="hamburger" id="hamburger" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Catálogo de Produtos</h1>
+            <p>Escolha seus itens abaixo por unidade ou peso fracionado (a partir de 0,5 kg) e finalize seu pedido no carrinho.</p>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <main>
+        <section class="section catalog-section" id="catalogo">
+            <div class="container">
+                <div class="catalog-controls">
+                    <div class="catalog-search-wrapper">
+                        <div class="search-box">
+                            <i class="fas fa-search search-icon"></i>
+                            <input
+                                type="search"
+                                id="productSearch"
+                                placeholder="Buscar produto (ex: pão francês, banana, batata)..."
+                                aria-label="Buscar produto"
+                                autocomplete="off"
+                            >
+                            <button type="button" id="clearSearch" class="clear-search-btn" aria-label="Limpar busca" hidden>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Categorias de produtos">
+                        <button type="button" class="category-tab active" data-category="Todos" role="tab" aria-selected="true">Todos</button>
+                    </div>
+                </div>
+
+                <div id="catalogStatus" class="catalog-status" hidden></div>
+
+                <div id="catalogContainer" class="catalog-container">
+                    <div class="catalog-loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Carregando produtos fresquinhos...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Sacolão Shalom</h2>
+                    <p>Qualidade, frescor e economia para a sua família.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Atendimento</h3>
+                    <p><a href="https://wa.me/5511988525518" target="_blank"><i class="fab fa-whatsapp"></i> (11) 98852-5518</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sacolão Shalom. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Cart Bar -->
+    <div class="cart-floating-bar" id="cartBar" aria-live="polite" hidden>
+        <div class="container cart-bar-content">
+            <div class="cart-summary-info">
+                <div class="cart-icon-wrapper">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </div>
+                <div class="cart-totals">
+                    <span class="cart-total-label">Subtotal dos itens:</span>
+                    <div class="cart-total-values">
+                        <strong class="cart-total-value" id="cartTotal">R$ 0,00</strong>
+                        <small class="cart-consult-note" id="cartConsultNote" hidden>+ itens a consultar</small>
+                    </div>
+                    <small class="cart-min-note" id="cartMinOrderNote"></small>
+                </div>
+            </div>
+            <a href="carrinho.html" class="btn btn-cart-action">
+                <i class="fas fa-shopping-cart"></i> Ir para o Carrinho / Finalizar
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511988525518?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" class="float-whatsapp" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
